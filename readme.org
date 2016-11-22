@@ -1,0 +1,25 @@
+#+title: ESP8226 10Hz GPS Tracker
+#+startup: indent
+In fall 2016 I started going to the race track and wanted to track my lap time.
+I used "Harry's Laptimer" since it seemed to be the best app you can get for this purpose.
+I used my IPhone to do so but shortly I realized that the time tracked was not very reliable.
+Professional laptimers were to expensive and I decided to build a 10Hz laptimer myself.
+So I was looking for a cheaper way of tracking. The first build was a bluetooth device I found through a google search.
+The code for this and a short description with the setup can be found in the folder bluetooth.
+Unfortunately iOS was not able to connect to the GPS. After another google search and looking through the specs of the app,
+I saw, that iOS only supports external Wifi GPS devices. So I looked what I could do about this.
+I passed by the ESP 8226 Wifi module and it seems worth a try.
+
+So here is the documentation of the process and links to the websited and documents I used to make this project work.
+Any help and support is highly welcome!
+
+* Device
+** Pins
+Pins facing right (antenna left)and antenna upwards
+| RX    | VCC   |
+| GPIO0 | RST   |
+| GPIO2 | CH_PD |
+| GND   | TX    |
+
+** Baudrate
+115200
